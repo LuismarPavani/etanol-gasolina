@@ -19,9 +19,9 @@ export default class Home extends Component<Props> {
         return (<>
             <Card >
                 <Text>Etanol:</Text>
-                <Input value={etanol.toString()} onChangeText={(etanol) => handleForm({ etanol })} />
+                <Input keyboardType="numeric" value={etanol.toString()} onChangeText={(etanol) => handleForm({ etanol })} />
                 <Text>Gasolina:</Text>
-                <Input value={gasolina.toString()} onChangeText={(gasolina) => handleForm({ gasolina })} />
+                <Input keyboardType="numeric" value={gasolina.toString()} onChangeText={(gasolina) => handleForm({ gasolina })} />
 
                 <Button onPress={() => calculate()}>Calcular</Button>
                 <Text style={styles.paragraph}>{resultado}</Text>
